@@ -74,6 +74,9 @@ public class OpenApiConfig {
                                                 .refreshUrl(authServerUrl + "/oauth2/token")
                                                 .scopes(new Scopes()
                                                         .addString("openid", "OpenID Connect scope")
+                                                        .addString("read", "OpenID Connect scope")
+                                                        .addString("write", "OpenID Connect scope")
+                                                        .addString("haha", "OpenID Connect scope")
                                                      )))))
                 .addSecurityItem(new SecurityRequirement().addList("oauth2", Arrays.asList("openid")));
     }
